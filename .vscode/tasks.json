@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "mkdir -p build && gcc -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror -Iinclude -g src/*.c -o build/app",
+            "type": "shell",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
