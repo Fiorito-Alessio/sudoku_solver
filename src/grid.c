@@ -1,6 +1,7 @@
 #include "grid.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define GRID_ROWS 9
 #define GRID_COLS 9
@@ -73,17 +74,24 @@ void display_grid(int *grid) {
     printf("\n+-------+-------+-------+\n");
 
     for (int i = 0; i < GRID_ROWS; i++) {
+        usleep(10000);
         printf("| ");
         for (int j = 0; j < GRID_COLS; j++) {
             int value = grid[(i * GRID_COLS) + j];
 
             if (value == 0) {
+                usleep(10000);
+                fflush(stdout);
                 printf(". ");
             } else {
+                usleep(10000);
+                fflush(stdout);
                 printf("%d ", value);
             }
 
             if ((j + 1) % 3 == 0) {
+                usleep(10000);
+                fflush(stdout);
                 printf("| ");
             }
         }
@@ -91,6 +99,8 @@ void display_grid(int *grid) {
         printf("\n");
 
         if ((i + 1) % 3 == 0) {
+            usleep(10000);
+            fflush(stdout);
             printf("+-------+-------+-------+\n");
         }
     }
