@@ -6,6 +6,11 @@
 
 int main(void) {
     int *grid = create_grid();
+    if (!grid) {
+        fprintf(stderr, "cannot create grid\n");
+        return EXIT_FAILURE;
+    }
+
     printf("Initial grid :\n");
     display_grid(grid);
 
