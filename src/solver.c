@@ -8,7 +8,7 @@
 
 bool is_legal(int n, int row, int col, int *grid) {
     // check for the row
-    for (int i = 0; i < GRID_ROWS; i++) {
+    for (int i = 0; i < GRID_COLS; i++) {
         if (grid[(row * GRID_COLS) + i] == n) {
             return false;
         }
