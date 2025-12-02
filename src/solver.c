@@ -41,6 +41,7 @@ bool is_legal(int n, int row, int col, int *grid) {
     return true;
 }
 
+// backtracking algorithm
 bool solve(int *grid) {
     int row, col;
     bool is_empty = false;
